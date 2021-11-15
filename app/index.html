@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="fr" ng-app>
-
-<head>
-    <meta charset="UTF-8">
-    <title>My HTML File</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <script src="lib/angular/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
-    <title>Document</title>
-</head>
-
-<body>
-    <p>Nothing here {{'yet' + '!'}}</p>
-    <p>1 + 2 = {{1 + 2}}</p>
-    <ul>
-        <li>
-          <span>Nexus S</span>
-          <p>
-            Fast just got faster with Nexus S.
-          </p>
-        </li>
-        <li>
-          <span>Motorola XOOM™ with Wi-Fi</span>
-          <p>
-            The Next, Next Generation tablet.
-          </p>
-        </li>
-      </ul>
-    
-</body>
-
+<html lang="en" ng-app="phoneApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="app.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
+<script src="app.js"></script>
+  </head>
+  <body ng-controller="PhoneListController">
+<p>
+    {{ 'yo ' +'qqchose'}}
+</p>
+<ul>
+    <li ng-repeat="phone in phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+  </body>
 </html>
